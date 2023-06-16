@@ -1,5 +1,5 @@
 {
-    "title": "Zoom General Settings",
+    "title": "Zoom Authentication Settings",
     "__version": "1.0",
     "__preferencedomain": "us.zoom.config",
     "links": [
@@ -96,19 +96,6 @@
                 }
             ]
         },
-        "DisableLoginWithEmail": {
-            "title": "Disable Sign in with Email Address",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "boolean"
-                }
-            ]
-        },
         "NoSSO": {
             "title": "Disable SSO Login",
             "anyOf": [
@@ -175,34 +162,6 @@
                 }
             ]
         },
-        "EnforceSignInToJoin": {
-            "title": "Force Sign-in to Join Meeting",
-            "description": "(EnforceSignInToJoin)-Forces users to be signed in before joining a meeting from the app. Users can be signed-in on the web portal when joining through join URL",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "boolean"
-                }
-            ]
-        },
-        "EnforceAppSignInToJoin": {
-            "title": "Force App Sign-in to Join Meeting",
-            "description": "(EnforceAppSignInToJoin)-Require the client to be logged-in to a Zoom account before joining any meeting or webinar",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "boolean"
-                }
-            ]
-        },
         "SetWebDomain": {
             "title": "Sign in Web Domain",
             "anyOf": [
@@ -221,19 +180,6 @@
                 }
             ]
         },
-        "LastLoginType": {
-            "title": "Remember the last Login Type Used",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "boolean"
-                }
-            ]
-        },
         "KeepSignedIn": {
             "title": "Automatically Login to Last Account Used (email only)",
             "anyOf": [
@@ -247,8 +193,8 @@
                 }
             ]
         },
-        "ZAutoUpdate": {
-            "title": "Allow User Initiated Updates",
+        "EnablePhoneLogin": {
+            "title": "Enable Phone Authentication (China Only)",
             "anyOf": [
                 {
                     "type": "null",
@@ -260,9 +206,8 @@
                 }
             ]
         },
-        "EnableSilentAutoUpdate": {
-            "title": "Enable Silent Updates",
-            "description": "(EnableSilentAutoUpdate)-Allows the desktop client to silently check for available stable-version updates. This option requires AutoUpdate option to be enabled, and will fail if not enabled",
+        "EnableAlipayLogin": {
+            "title": "Enable Alipay Authentication (China Only)",
             "anyOf": [
                 {
                     "type": "null",
@@ -274,9 +219,8 @@
                 }
             ]
         },
-        "AlwaysCheckLatestVersion": {
-            "title": "Always Check for Available Updates on Launch",
-            "description": "(AlwaysCheckLatestVersion)-Allows the desktop client to check for any available updates. This option requires AutoUpdate option to be enabled, and will fail if not enabled",
+        "EnablQQLogin": {
+            "title": "Enable QQ Authentication (China Only)",
             "anyOf": [
                 {
                     "type": "null",
@@ -288,158 +232,8 @@
                 }
             ]
         },
-        "SetUpdatingChannel": {
-            "title": "Update Channel",
-            "description": "(SetUpdatingChannel)-Control the cadence of updates applied to the desktop client (version 5.6.8 or higher)",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "integer",
-                    "options": {
-                        "enum_titles": [
-                            "Slow",
-                            "Fast"
-                        ]
-                    },
-                    "enum": [
-                        0,
-                        1
-                    ]
-                }
-            ]
-        },
-        "disableDaemonInstall": {
-            "title": "Disable Auto Update Daemon",
-            "description": "(disableDaemonInstall)-Controls the use of the daemon helper to install updates, which bypasses the need to enter admin credentials when upgrading. This option requires AutoUpdate option to be enabled, and will fail if not enabled",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "boolean"
-                }
-            ]
-        },
-        "Login_Domain": {
-            "title": "Login Domain for Email Addresses",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "string",
-                    "options": {
-                        "inputAttributes": {
-                            "placeholder": "company.com"
-                        }
-                    }
-                }
-            ]
-        },
-        "DefaultUsePortraitView": {
-            "title": "Default to Portrait Mode",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "boolean"
-                }
-            ]
-        },
-        "DisableDirectShare": {
-            "title": "Disable Direct Share",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "boolean"
-                }
-            ]
-        },
-        "PresentToRoomWithAudio": {
-            "title": "Allow Audio when Presenting to a Zoom Room",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "boolean"
-                }
-            ]
-        },
-        "EnableHIDControl": {
-            "title": "Enable HID Control of USB Audio Devices",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "boolean"
-                }
-            ]
-        },
-        "EnableStartMeetingWithRoomSystem": {
-            "title": "Display Call Room System Button on Zoom Home Screen",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "boolean"
-                }
-            ]
-        },
-        "PresentToRoomOptimizeVideo": {
-            "title": "Optimize Screen Sharing for Zoom Room Sharing",
-            "description": "(PresentToRoomOptimizeVideo)-Client will optimize screen sharing for video clip when sharing directly to a Zoom Room",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "boolean"
-                }
-            ]
-        },
-        "PresentToRoomOption": {
-            "title": "Set Sharing Option when Sharing Directly to Zoom Room",
-            "description": "(PresentToRoomOption)-False shows all sharing options, True automatically shares the entire desktop",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "boolean"
-                }
-            ]
-        },
-        "PresentInMeetingOption": {
-            "title": "Set Sharing Option when Sharing Directory to Zoom Room Within a Meeting",
-            "description": "(PresentInMeetingOption)-False shows all sharing options, True automatically shares the entire desktop",
+        "EnableWeChatLogin": {
+            "title": "Enable WeChat Authentication (China Only)",
             "anyOf": [
                 {
                     "type": "null",
@@ -476,6 +270,91 @@
                 }
             ]
         },
+        "Login_Domain": {
+            "title": "Login Email Domains",
+            "description": "(Login_Domain)-Set the email address domain that users can login with, each separated by '&'",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string",
+                    "options": {
+                        "inputAttributes": {
+                            "placeholder": "zoom.us&hooli.com"
+                        }
+                    }
+                }
+            ]
+        },
+        "EnableCloudSwitch": {
+            "title": "Enable Switching Between Zoom Commercial and Government Cloud",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "EnforceSignInToJoin": {
+            "title": "Require User to be Signed In for Meetings",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "EnforceAppSignInToJoin": {
+            "title": "Require User to be Signed into Desktop App",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "EnforceSignInToJoinForWebinar": {
+            "title": "Require User to be Signed into Desktop App for Webinars",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "EnforceAppSignInToJoinForWebinar": {
+            "title": "Require Authentication on the Desktop App for Webinars",
+            "description": "(EnforceAppSignInToJoinForWebinar)-",
+            "anyOf": [
+                {
+                    "type": "null",
+                    "title": "Not Configured"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ]
+        },
         "SetDevicePolicyToken": {
             "title": "Internal Meeting Authentication Token",
             "links": [
@@ -497,92 +376,6 @@
                             "placeholder": "Token"
                         }
                     }
-                }
-            ]
-        },
-        "AlwaysShowVideoPreviewDialog": {
-            "title": "Show Video Previews when Joining a Meeting",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "boolean"
-                }
-            ]
-        },
-        "LegacyCaptureMode": {
-            "title": "Disable GPU Acceleration",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "boolean"
-                }
-            ]
-        },
-        "BlockUntrustedSSLCert": {
-            "title": "Block Untrusted SSL Connections",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "boolean"
-                }
-            ]
-        },
-        "EmbedUserAgentString": {
-            "title": "Embedded User Agent String",
-            "description": "(embeduseragentstring)-Allows embedding text in the Zoom using a user agent string",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "string",
-                    "options": {
-                        "inputAttributes": {
-                            "placeholder": "User Agent String"
-                        }
-                    }
-                }
-            ]
-        },
-        "IgnoreBandwidthLimits": {
-            "title": "Ignore Bandwidth Limits",
-            "description": "(IgnoreBandwidthLimits)-Ignore bandwidth limited set on web settings. Useful for exceptions",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "boolean"
-                }
-            ]
-        },
-        "DisableZoomApps": {
-            "title": "Disable Zoom App Quick Launch",
-            "description": "(DisableZoomApps)-Hide Zoom Apps quick launch button in the Zoom interface",
-            "anyOf": [
-                {
-                    "type": "null",
-                    "title": "Not Configured"
-                },
-                {
-                    "title": "Configured",
-                    "type": "boolean"
                 }
             ]
         }
